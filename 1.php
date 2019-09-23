@@ -46,5 +46,28 @@ echo is_float($x);
 echo is_null($x);
 
 //Zmienne superglobalne
-$_GET, $_POST, $_COOKIE, $_FILES, $_SESSION, $_SERVER
+//$_GET, $_POST, $_COOKIE, $_FILES, $_SESSION, $_SERVER
+
+echo $_SERVER[`SERVER_PORT`]; //80
+echo $_SERVER[`SERVER_NAME`]; //scieżka od htdocs
+echo $_SERVER[`SCRIPT_NAME`]; //ścieżka bezwzględna do htdocs
+echo $_SERVER[`DOCUMENT_ROOT`]; `<br>`;
+echo $_SERVER[`SERVER_PROTOCOL`]; `<br>`;
+
+$lokalizacjapliku = $_SERVER[`DOCUMENT_ROOT`].$_SERVER[`SCRIPT_NAME`];
+echo $lokalizacjapliku, `<hr>`;
+
+//STAŁE
+
+define(`NAZWISKO`,`Kowal`);
+echo NAZWISKO;
+
+define(`imie`,`Janusz`);
+echo imie;
+
+define(`WIEK`,18,true);
+echo WIEK;
+
+define(`PI`, 3.14159);
+echo PI;
  ?>

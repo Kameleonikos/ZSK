@@ -1,14 +1,14 @@
-<<?php
+<?php
 $x=1;
 $y=1.0;
 echo gettype($x);
 echo gettype($y);
 if ($x === $y)
 {
-  echo `identyczne<hr>`
+  echo `identyczne<hr>`;
 }
 else {
-echo `rózne<hr>`
+echo `rózne<hr>`;
 }
 
 $x=2;
@@ -23,7 +23,7 @@ echo ++$y;//7
 
 $text=`123ssd`;
 $x=(int)$text;
-echo $x,<hr>;//123
+echo $x,`<hr>`;//123
 
 $text1=0;
 $x1=(bool)$text1;

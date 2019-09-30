@@ -1,5 +1,5 @@
 <?php
-$x=1;
+/*$x=1;
 $y=1.0;
 echo gettype($x);
 echo gettype($y);
@@ -59,15 +59,29 @@ echo $lokalizacjapliku, `<hr>`;
 
 //STAŁE
 
-define(`NAZWISKO`,`Kowal`);
-echo NAZWISKO;
+define(`nazwisko`,`Kowal`);
+echo nazwisko;
 
 define(`imie`,`Janusz`);
 echo imie;
 
-define(`WIEK`,18,true);
-echo WIEK;
+define(`wiek`,18,true);
+echo wiek;
 
-define(`PI`, 3.14159);
-echo PI;
+define(`pi`, 3.14159);
+echo pi;
+*/
+
+//stałe predefiniowane
+echo PHP_VERSION;
+echo "<br>";
+echo gettype(PHP_VERSION);
+echo "<br>";
+echo PHP_OS;
+echo "<br>";
+echo __LINE__;
+echo "<br>";
+echo __FILE__;
+echo "<br>";
+echo __DIR__;
  ?>

@@ -28,7 +28,12 @@
               $s=$s+($i*$j);
               $j++;
             }
-            else {
+            elseif ($i==11-$j) {
+              echo "<td bgcolor = blue>".$i*$j."</td>";
+              $ss=$ss+($i*$j);
+              $j++;
+            } else
+            {
               echo "<td>".$i*$j."</td>";
               $j++;
             }
@@ -39,6 +44,7 @@
         }
       } while ($i<=10); ?>
     </table>
-    <?php echo "Suma elementów na przekątnej wynosi ". $s; ?>
+    <?php echo "Suma elementów na przekątnej wynosi ". $s."<br>";
+    echo "Suma elementów na przekątnej nr 2 wynosi ". $ss; ?>
   </body>
 </html>

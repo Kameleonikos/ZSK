@@ -13,7 +13,29 @@
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
 
+<<<<<<< HEAD
+=======
     </div>
+    <!--Trigger-->
+<a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Login</a>
+
+<div id="login" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-body">
+        <button data-dismiss="modal" class="close">&times;</button>
+        <h4>Login</h4>
+        <form>
+          <input type="text" name="username" class="username form-control" placeholder="Username"/>
+          <input type="password" name="password" class="password form-control" placeholder="password"/>
+          <input class="btn login" type="submit" value="Login" />
+        </form>
+      </div>
+>>>>>>> f004f7c0a082afa65655e173ba350aa4a8ffe682
+    </div>
+  </div>
+</div>
     <div class="parallax1">
 
     </div>

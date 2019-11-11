@@ -173,7 +173,7 @@ echo "<hr>";
     echo "<hr>";
 
     //Tablica 3wymiary i wyświetl
-     $tabl = array(
+    /* $tabl = array(
        array(
          array('27','45','32'),
          array('23','49','35'),
@@ -189,7 +189,36 @@ echo "<hr>";
          echo "<br>";
        }
        echo "<br>";
+     }*/
+
+     $tab = array(100, 34, 4, 234, 88);
+
+     function wyswietl($tab)
+     {
+       for ($i=0; $i < count($tab); $i++) {
+         echo $tab[$i];
+       }
      }
+
+     wyswietl($tab);
+
+     sort($tab);
+     wyswietl($tab);
+     echo "<br>";
+     rsort($tab);
+
+     wyswietl($tab);
+
+     $tabAssoc = array('imie' => Zenon, 'nazwisko' => 'Nowak', 'wiek' => 30);
+
+     wyswietl($tabAssoc);
+     asort($tabAssoc);
+     wyswietl($tabAssoc);
+     ksort($tabAssoc);
+     wyswietl($tabAssoc);
+     krsort($tabAssoc);
+     wyswietl($tabAssoc);
+
      ?>
   </body>
 </html>

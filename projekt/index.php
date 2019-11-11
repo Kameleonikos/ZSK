@@ -13,8 +13,6 @@
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
 
-<<<<<<< HEAD
-=======
     </div>
     <!--Trigger-->
 <a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Login</a>
@@ -32,7 +30,6 @@
           <input class="btn login" type="submit" value="Login" />
         </form>
       </div>
->>>>>>> f004f7c0a082afa65655e173ba350aa4a8ffe682
     </div>
   </div>
 </div>

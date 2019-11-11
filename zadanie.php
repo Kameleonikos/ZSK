@@ -36,7 +36,7 @@
     $mian = sizeof($l);
     $min=min($l);
     $maks=max($l);
-    echo "<ul><li>Średni wiek: ".$n/$mian." lat</li><li>Najmłodsza osoba ma ".$min." lat</li><li> Najstarsza osoba w rodzinie ma: ".$maks." lat</li></ul>";
+    echo "Średnia wieku: ".$n/$mian." lat<br>Najmłodsza osoba ma: ".$min." lat<br>Najstarsza osoba w rodzinie ma: ".$maks." lat";
     };
      ?>
   </body>

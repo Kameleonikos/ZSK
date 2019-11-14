@@ -1,5 +1,5 @@
 CREATE TABLE `users` (
-  `id_user` int(20) UNIQUE PRIMARY KEY,
+  `id_user` int(20) PRIMARY KEY,
   `login` varchar(50) UNIQUE NOT NULL,
   `password` varchar(50) NOT NULL,
   `mail` varchar(70) UNIQUE NOT NULL,
@@ -8,12 +8,12 @@ CREATE TABLE `users` (
 );
 
 CREATE TABLE `status` (
-  `id_status` int(1) UNIQUE PRIMARY KEY,
+  `id_status` int(1) PRIMARY KEY,
   `status` varchar(20) NOT NULL
 );
 
 CREATE TABLE `userpanel` (
-  `id_userpanel` int(20) UNIQUE PRIMARY KEY,
+  `id_userpanel` int(20) PRIMARY KEY,
   `name` varchar(30) NOT NULL,
   `surname` varchar(50) NOT NULL,
   `birthday` date,
@@ -22,7 +22,7 @@ CREATE TABLE `userpanel` (
 );
 
 CREATE TABLE `flashcard` (
-  `id_flashcard` int(20) UNIQUE PRIMARY KEY,
+  `id_flashcard` int(20) PRIMARY KEY,
   `id_set` int(10) UNIQUE,
   `id_word` int(20),
   `id_translate` int(20),
@@ -30,17 +30,17 @@ CREATE TABLE `flashcard` (
 );
 
 CREATE TABLE `words` (
-  `id_word` int(20) UNIQUE PRIMARY KEY,
+  `id_word` int(20) PRIMARY KEY,
   `word` varchar(50)
 );
 
 CREATE TABLE `translateword` (
-  `id_translate` int(20) UNIQUE PRIMARY KEY,
+  `id_translate` int(20) PRIMARY KEY,
   `translateword` varchar(50)
 );
 
 CREATE TABLE `set` (
-  `id_set` int(10) UNIQUE PRIMARY KEY,
+  `id_set` int(10) PRIMARY KEY,
   `created_by` int(20),
   `name_of_set` varchar(50),
   `id_difficulty` int(1)
@@ -52,7 +52,7 @@ CREATE TABLE `whos_set` (
 );
 
 CREATE TABLE `difficulty` (
-  `id_difficulty` int(1) UNIQUE PRIMARY KEY,
+  `id_difficulty` int(1) PRIMARY KEY,
   `difficulty` varchar(20)
 );
 

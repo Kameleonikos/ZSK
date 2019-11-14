@@ -3,8 +3,8 @@ CREATE TABLE `users` (
   `login` varchar(50) UNIQUE NOT NULL,
   `password` varchar(50) NOT NULL,
   `mail` varchar(70) UNIQUE NOT NULL,
-  `date_of_join` timestamp DEFAULT (now()),
-  `id_status` int(1) DEFAULT (inactive)
+  `date_of_join` timestamp DEFAULT CURRENT_TIMESTAMP,
+  `id_status` int(1) DEFAULT 1
 );
 
 CREATE TABLE `status` (

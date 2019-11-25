@@ -19,8 +19,8 @@
       <div class="loginpopup-content">
          <img src="close.png" alt="disapare image" id="close">
       <form method="post" action="index.html">
-        <input type="text" name="login" value="" placeholder="Username or Email"><br>
-        <input type="password" name="password" value="" placeholder="Password"><br>
+        <input type="text" name="login" value="" placeholder="Nazwa użytkownika"><br>
+        <input type="password" name="password" value="" placeholder="Hasło"><br>
         <input type="submit" name="commit" value="Login" class="passwordboxbutton"><br>
       </form>
         Zapomniałeś hasła? <a href="index.html" class="passwordboxbutton">Zresetuj hasło</a>

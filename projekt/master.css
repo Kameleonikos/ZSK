@@ -1,10 +1,13 @@
 body, html {
   height: 100%;
-  background-color: #818181;
   margin: 0;
+  padding-top: 20px;
   padding: 0;
+  background-image: url("gb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
 .topnav {
   background-color: #333;
   overflow: top;
@@ -29,85 +32,30 @@ body, html {
   background-color: #4CAF50;
   color: white;
 }
-
-.parallax1 {
-  background-image: url("gb.jpg");
-  opacity: 0.75;
+.loginpopup {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
   height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 1s;
 }
-.parallax2 {
-  background-image: url("pl.jpg");
-  opacity: 0.75;
-  height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-}
-  /*Trigger Button*/
-.login-trigger {
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(to bottom right, #B05574, #F87E7B);
-  padding: 15px 30px;
-  border-radius: 30px;
+.loginpopup-content {
+  height: 20%;
+  width: 40%;
+  background: #ddd;
+  padding: 20px;
   position: relative;
-  top: 50%;
 }
-
-/*Modal*/
-h4 {
-  font-weight: bold;
-  color: #fff;
-}
-.close {
-  color: #fff;
-  transform: scale(1.2)
-}
-.modal-content {
-  font-weight: bold;
-  background: linear-gradient(to bottom right,#F87E7B,#B05574);
-}
-.form-control {
-  margin: 1em 0;
-}
-.form-control:hover, .form-control:focus {
-  box-shadow: none;
-  border-color: #fff;
-}
-.username, .password {
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  border-bottom: 2px solid #eee;
-  padding-left: 0;
-  font-weight: normal;
-  background: transparent;
-}
-.form-control::-webkit-input-placeholder {
-  color: #eee;
-}
-.form-control:focus::-webkit-input-placeholder {
-  font-weight: bold;
-  color: #fff;
-}
-.login {
-  padding: 6px 20px;
-  border-radius: 20px;
-  background: none;
-  border: 2px solid #FAB87F;
-  color: #FAB87F;
-  font-weight: bold;
-  transition: all .5s;
-  margin-top: 1em;
-}
-.login:hover {
-  background: #FAB87F;
-  color: #fff;
-}
+#close{
+position:absolute;
+width:20px;
+height:20px;
+border-radius:50px;
+top:5px;
+left:95%;
+cursor:pointer;

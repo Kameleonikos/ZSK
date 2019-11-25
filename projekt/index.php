@@ -9,38 +9,27 @@
   <body>
     <div class="topnav">
       <a class="active" href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-
+      <a href="losowyzestaw.php">Losowy zestaw</a>
+      <a href="#contact">Kontakt</a>
+      <a href="#about">O nas</a>
+      <a id="loginbutton" style="float:right;">Login</a>
     </div>
-    <!--Trigger-->
-<a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Login</a>
-
-<div id="login" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <div class="modal-content">
-      <div class="modal-body">
-        <button data-dismiss="modal" class="close">&times;</button>
-        <h4>Login</h4>
-        <form>
-          <input type="text" name="username" class="username form-control" placeholder="Username"/>
-          <input type="password" name="password" class="password form-control" placeholder="password"/>
-          <input class="btn login" type="submit" value="Login" />
-        </form>
+    <div class="loginpopup">
+      <div class="loginpopup-content">
+         <img src="close.png" alt="disapare image" id="close">
+      <form method="post" action="index.html">
+        <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+        <p><input type="password" name="password" value="" placeholder="Password"></p>
+        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+      </form>
+        <p>Forgot your password? <a href="index.html">Click here to reset it</a></p>
       </div>
-    </div>
-  </div>
-</div>
-    <div class="parallax1">
-
-    </div>
-    <div class="parallax2">
-
-    </div>
-    <footer>
-
-    </footer>
+      </div>
+      <script type="text/javascript">
+  document.getElementById("loginbutton").addEventListener("click", function(){
+       document.querySelector(".loginpopup").style.display = "flex";});
+  document.getElementById("close").addEventListener("click", function(){
+       document.querySelector(".loginpopup").style.display="none";});
+      </script>
   </body>
 </html>

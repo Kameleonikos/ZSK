@@ -3,11 +3,14 @@ body, html {
   margin: 0;
   padding-top: 20px;
   padding: 0;
-  background-image: url("gb.jpg");
+  width: 100%;
+  background-image: url("gb2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: scroll;
   font-family: "Bookman Old Style";
+  display: table;
 }
 .topnav {
   background-color: #333;
@@ -23,7 +26,7 @@ body, html {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 100%;
 }
 .topnav a:hover {
   background-color: #ddd;
@@ -75,4 +78,32 @@ body, html {
   cursor: pointer;
   border-radius: 4px;
   font-family: "Bookman Old Style";
+}
+.maintext
+{
+  width: 70%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+.content {
+  border-radius: 10px;
+  padding: 2%;
+    background-color: white;
+    display: inline-block;
+    text-align: left;
+}
+h1
+{
+  text-align: center;
+}
+footer
+{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }

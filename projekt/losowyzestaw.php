@@ -26,6 +26,9 @@
         Zapomniałeś hasła? <a href="index.html" class="passwordboxbutton">Zresetuj hasło</a>
       </div>
       </div>
+      <footer>
+        Jakub Putto 2019
+      </footer>
       <script type="text/javascript">
   document.getElementById("loginbutton").addEventListener("click", function(){
        document.querySelector(".loginpopup").style.display = "flex";});

@@ -19,27 +19,30 @@
     <div class="loginpopup">
       <div class="loginpopup-content">
          <img src="close.png" alt="disapare image" id="close">
-      <form method="post" action="index.html">
-        <input type="text" name="login" value="" placeholder="Nazwa użytkownika"><br>
-        <input type="password" name="password" value="" placeholder="Hasło"><br>
+      <form method="post">
+        <h1>Logowanie</h1>
+        <input class="logininput" type="text" name="login" value="" placeholder="Nazwa użytkownika"><br>
+        <input class="logininput" type="password" name="password" value="" placeholder="Hasło"><br>
         <input type="submit" name="commit" value="Login" class="passwordboxbutton"><br>
       </form>
-        Zapomniałeś hasła? <a href="index.html" class="passwordboxbutton">Zresetuj hasło</a>
+        Zapomniałeś hasła? <a class="passwordboxbutton">Zresetuj hasło</a>
       </div>
       </div>
       <section class="maintext">
         <div class="content">
+          <div class="cfform">
           <h1>Kontakt</h1>
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut sem vel ex tempus sollicitudin quis et nisi. Cras viverra purus non dui euismod congue. Curabitur auctor pulvinar lectus vitae pharetra. Fusce sit amet ligula vel dolor euismod fringilla. Morbi sed nulla iaculis, efficitur ligula a, ultrices dolor. Aliquam sed aliquam augue. Phasellus vehicula urna sit amet est suscipit finibus. Fusce iaculis eu felis sit amet pellentesque. Aliquam ut quam gravida ipsum eleifend pharetra. Etiam et est a neque vehicula ornare vitae faucibus nulla. Praesent sed lacus commodo dolor vestibulum congue sollicitudin at velit. Suspendisse potenti. Proin cursus congue enim, at luctus ante faucibus at. Aenean vitae nunc vitae tortor ultrices consequat.
-
-Vestibulum molestie, ligula eget eleifend porta, nibh mauris hendrerit turpis, fermentum bibendum quam turpis et massa. Aliquam consequat quis lacus feugiat accumsan. Suspendisse et felis a tortor pharetra faucibus. In hac habitasse platea dictumst. Nullam id ligula id orci vestibulum pellentesque. Nulla at diam non ligula accumsan tempor in vitae est. Nunc in dolor porttitor enim rhoncus luctus in ut ipsum.
-
-Donec ullamcorper massa vel tortor tempus, id luctus lacus laoreet. Fusce a est in turpis interdum iaculis ut ac ligula. Vivamus rutrum sollicitudin elit, eget ultrices ipsum ornare quis. Phasellus interdum risus non elit finibus efficitur. Etiam lacinia, enim vitae tempus volutpat, felis dui vehicula nunc, in varius orci magna et erat. Aliquam enim dolor, mollis vitae nunc et, rhoncus mattis neque. Praesent nulla odio, gravida in aliquam id, consequat ut massa. Sed sit amet finibus mauris, vitae convallis arcu. Curabitur suscipit malesuada nunc, ac accumsan lacus tempor ut. Phasellus laoreet arcu eu ipsum sollicitudin, vitae vehicula nisi pellentesque. In eu dui nunc. Donec varius magna nec suscipit semper. Vestibulum a nisi nisl.
-
-Mauris arcu mauris, consequat pulvinar facilisis at, lacinia ac risus. Nulla mi libero, condimentum vel accumsan et, luctus sit amet purus. Mauris sed leo quis orci porttitor varius nec a orci. Ut at enim in ex bibendum porta. Curabitur id eleifend neque. Integer ut dui eget ipsum fringilla accumsan et at eros. Etiam vestibulum risus magna, quis accumsan mi pharetra ac. Nulla ut justo dictum, vulputate velit at, rutrum ligula. Curabitur a dolor sapien. Nunc in elementum erat. Sed non elementum nunc, a sodales nibh. Maecenas sed eros vitae diam mollis condimentum. Morbi pretium porta nulla non aliquam. Suspendisse venenatis nibh in elit dictum tincidunt eu ac nulla. Mauris at pharetra nulla. Nam eget placerat ligula, imperdiet sollicitudin turpis.
-
-Praesent blandit tempor sapien, in viverra velit cursus quis. Aenean commodo imperdiet eros non mattis. Donec facilisis id nulla vitae molestie. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi et felis tellus. Nunc lectus erat, molestie quis facilisis in, sagittis sed elit. Maecenas elementum massa leo, sit amet faucibus dolor ultricies non. Vestibulum hendrerit elit tellus, sit amet eleifend enim imperdiet id. Maecenas pharetra placerat finibus. Mauris nec nibh quis ex condimentum posuere vitae vel velit. Fusce in orci ut libero sollicitudin placerat. Vestibulum sit amet blandit nunc. Nunc condimentum metus sit amet mi efficitur rhoncus.
+          <form method="post">
+            Twoje imię<br>
+            <input class="cfinput" type="text" name="cf_name"><br>
+            Twój e-mail<br>
+            <input class="cfinput" type="text" name="cf_email"><br>
+            Wiadomość<br>
+            <textarea class="cfinput" name="cf_message"></textarea><br>
+            <input class="passwordboxbutton" type="submit" value="Wyślij">
+            <input class="passwordboxbutton" type="reset" value="Wyczyść">
+          </form>
+        </div>
         </div>
         </section>
         <footer>

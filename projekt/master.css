@@ -89,9 +89,9 @@ body, html {
 .content {
   border-radius: 10px;
   padding: 2%;
-    background-color: white;
-    display: inline-block;
-    text-align: left;
+  background-color: white;
+  display: inline-block;
+  text-align: left;
 }
 h1
 {
@@ -106,4 +106,16 @@ footer
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
+}
+.setbutton
+{
+  margin: 0.5%;
+  border-radius: 10px;
+  padding: 2%;
+  background-color: white;
+  display: inline-block;
+  text-align: left;
+  font-size: 200%;
+  text-decoration: none;
+  color: black;
 }

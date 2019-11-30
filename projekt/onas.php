@@ -8,10 +8,11 @@
   </head>
   <body>
     <div class="topnav">
-      <a class="active" href="index.php">Home</a>
+      <a href="index.php">Home</a>
+      <a href="zestawy.php">Zestawy</a>
       <a href="losowyzestaw.php">Losowy zestaw</a>
       <a href="kontakt.php">Kontakt</a>
-      <a href="onas.php">O nas</a>
+      <a class="active" href="onas.php">O nas</a>
       <a href="rejestracja.php" style="float:right;">Zarejestruj się</a>
       <a id="loginbutton" style="float:right;">Zaloguj się</a>
     </div>

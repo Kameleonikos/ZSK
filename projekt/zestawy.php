@@ -9,11 +9,11 @@
   <body>
     <div class="topnav">
       <a href="index.php">Home</a>
-      <a href="zestawy.php">Zestawy</a>
+      <a class="active" href="zestawy.php">Zestawy</a>
       <a href="losowyzestaw.php">Losowy zestaw</a>
       <a href="kontakt.php">Kontakt</a>
       <a href="onas.php">O nas</a>
-      <a class="active" href="rejestracja.php" style="float:right;">Zarejestruj się</a>
+      <a href="rejestracja.php" style="float:right;">Zarejestruj się</a>
       <a id="loginbutton" style="float:right;">Zaloguj się</a>
     </div>
     <div class="loginpopup">
@@ -27,6 +27,24 @@
         Zapomniałeś hasła? <a href="index.html" class="passwordboxbutton">Zresetuj hasło</a>
       </div>
       </div>
+      <section class="maintext">
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+        <a class="setbutton" href="choosenset.php">Zestaw</a>
+      </section>
       <footer>
         Jakub Putto 2019
       </footer>

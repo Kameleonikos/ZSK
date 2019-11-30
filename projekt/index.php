@@ -9,6 +9,7 @@
   <body>
     <div class="topnav">
       <a class="active" href="index.php">Home</a>
+      <a href="zestawy.php">Zestawy</a>
       <a href="losowyzestaw.php">Losowy zestaw</a>
       <a href="kontakt.php">Kontakt</a>
       <a href="onas.php">O nas</a>

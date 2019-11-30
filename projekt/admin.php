@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiszkomani</title>
     <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
   </head>
   <body>
     <div class="topnav">
-      <a class="active" href="index.php">Home</a>
+      <a  href="index.php">Home</a>
+      <a href="zestawy.php">Zestawy</a>
       <a href="losowyzestaw.php">Losowy zestaw</a>
       <a href="kontakt.php">Kontakt</a>
       <a href="onas.php">O nas</a>
       <a href="rejestracja.php" style="float:right;">Zarejestruj się</a>
-      <a id="loginbutton" style="float:right;">Zaloguj się</a>
+      <a id="loginbutton" style="float:right; color: white !important;">Zaloguj się</a>
     </div>
     <div class="loginpopup">
       <div class="loginpopup-content">
@@ -32,8 +38,8 @@
           <h1>Panel admina</h1>
           <div class="admpanel">
             <h3>Użytkownicy</h3>
-            <form method="post">
-              Wybierz ID użytkownika: <input type="number" name="idsearch" value="" placeholder="Id użytkownika"><br>
+            <form class="admform" method="post">
+              Wybierz ID użytkownika: <input class="adminput" type="number" name="idusersearch" value="" placeholder="Id użytkownika"><br>
               Wybierz akcję: <select name="useridaction">
                 <option value="delete">Usuń</option>
                 <option value="setactive">Aktywuj</option>
@@ -41,6 +47,18 @@
                 <option value="block">Zablokuj</option>
                 <option value="unblock">Odblokuj</option>
               </select>
+              <br>
+              <input class="passwordboxbutton" type="submit" name="" value="Wykonaj">
+            </form>
+          </div>
+          <br>
+          <div class="admpanel">
+            <h3>Zestawy fiszek</h3>
+            <form class="admform" method="post">
+              Wybierz ID zestawu: <input class="adminput" type="number" name="idsetsearch" value="" placeholder="Id zestawu"><br>
+              Usunąć? <input type="checkbox" name="deleteset" value="">
+              <br>
+              <input class="passwordboxbutton" type="submit" name="" value="Wykonaj">
             </form>
           </div>
         </div>

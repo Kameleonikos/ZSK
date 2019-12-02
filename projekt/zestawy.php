@@ -34,22 +34,22 @@
       </div>
       </div>
       <section class="maintext">
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
-        <a class="setbutton" href="chosenset.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
+        <a class="setbutton" href="wybranyzestaw.php">Zestaw</a>
       </section>
       <footer>
         Jakub Putto 2019

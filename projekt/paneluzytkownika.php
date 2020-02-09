@@ -1,3 +1,6 @@
+<?php
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
   <head>
@@ -17,8 +20,13 @@
       <a href="losowyzestaw.php">Losowy zestaw</a>
       <a href="kontakt.php">Kontakt</a>
       <a href="onas.php">O nas</a>
-      <a href="index.php" style="float:right;">Wyloguj się</a>
-      <a class="active" href="paneluzytkownika.php"  style="float:right;">Panel użytkownika</a>
+      <?php if (isset($_SESSION["login"])) {
+        ?><a class="active" href="paneluzytkownika.php" style=float:right;>Panel użytkownika</a>
+        <a href="wylogowanie.php" style=float:right;>Wyloguj się</a><?php
+      } else {
+        ?><a href="rejestracja.php" style="float:right;">Zarejestruj się</a>
+        <a id="loginbutton" style="float:right; color: white !important;">Zaloguj się</a> <?php
+      }?>
     </div>
       <section class="maintext">
         <div class="content">
@@ -26,7 +34,7 @@
           <div class="admpanel">
             <h3>Twoje zestawy</h3>
             <form class="admform" method="post">
-              Wybierz nazwę zestawu:
+              Wybierz nazwę zestawu:<br><br>
               <select name="usersetname">
                 <option value="1">Zestaw 1</option>
               </select>
@@ -40,7 +48,7 @@
           <div class="admpanel">
             <form class="admform" method="post">
               <h3>Nowy zestaw</h3>
-              Nazwa zestawu: <input type="text" name="newsetname" value=""><br>
+              Nazwa zestawu:<br><br> <input type="text" name="newsetname" value=""><br>
               Fiszki:<br>
               <table>
                 <tr>
@@ -67,14 +75,20 @@
           <div class="admpanel">
             <h3>Zmiana danych</h3>
             <form class="admform" method="post">
-              Zmień login:<br><input class="adminput" type="text" name="username" value="" placeholder="Aktualny login"><br>
-              <input class="adminput" type="text" name="usernewname" value="" placeholder="Nowy login">
-              <br>
-              Zmień hasło:<br>
-              <input class="adminput" type="text" name="userpassword" value="" placeholder="Aktualne hasło"><br>
-              <input class="adminput" type="text" name="usernewpassword" value="" placeholder="Nowe hasło"><br>
-              <input class="adminput" type="text" name="usernewpasswordcheck" value="" placeholder="Potwierdż nowe hasło"><br>
+              Zmień hasło:<br><br>
+              <input class="adminput" type="password" name="userpassword" value="" placeholder="Aktualne hasło" required><br>
+              <input class="adminput" type="password" name="usernewpassword" value="" placeholder="Nowe hasło" required><br>
+              <input class="adminput" type="password" name="usernewpasswordcheck" value="" placeholder="Potwierdż nowe hasło" required><br>
               <input class="passwordboxbutton" type="submit" name="" value="Wykonaj">
+            </form>
+          </div>
+          <br>
+          <div class="admpanel">
+            <h3>Usuwanie konta</h3>
+            <form class="admform" method="post">
+              Czy chcesz usunąć konto?<br><br>
+              <input class="adminput" type="password" name="password" value="" placeholder="Wpisz hasło" required><br>
+              <input class="passwordboxbutton" type="submit" name="userdeletesubmit" value="Wykonaj">
             </form>
           </div>
         </div>

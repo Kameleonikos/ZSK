@@ -2,5 +2,5 @@
 $servername = "localhost";
 $username = "root";
 // Create connection
-$conn = new mysqli($servername, $username, '', "bazaprojekt");
+$conn = mysqli_connect($servername, $username, '', "bazaprojekt");
 ?>

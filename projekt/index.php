@@ -1,3 +1,6 @@
+<?php
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
   <head>
@@ -17,19 +20,53 @@
       <a href="losowyzestaw.php">Losowy zestaw</a>
       <a href="kontakt.php">Kontakt</a>
       <a href="onas.php">O nas</a>
-      <a href="rejestracja.php" style="float:right;">Zarejestruj się</a>
-      <a id="loginbutton" style="float:right; color: white !important;">Zaloguj się</a>
+      <?php if (isset($_SESSION["login"])) {
+        ?><a href="paneluzytkownika.php" style=float:right;>Panel użytkownika</a>
+        <a href="wylogowanie.php" style=float:right;>Wyloguj się</a><?php
+      } else {
+        ?><a href="rejestracja.php" style="float:right;">Zarejestruj się</a>
+        <a id="loginbutton" style="float:right; color: white !important;">Zaloguj się</a> <?php
+      }?>
     </div>
     <div class="loginpopup">
       <div class="loginpopup-content">
          <img src="close.png" alt="disapare image" id="close">
-      <form method="post" action="index.html">
+      <form method="post">
         <h1>Logowanie</h1>
-        <input class="logininput" type="text" name="login" value="" placeholder="Nazwa użytkownika"><br>
-        <input class="logininput" type="password" name="password" value="" placeholder="Hasło"><br>
-        <input type="submit" name="commit" value="Login" class="passwordboxbutton"><br>
+        <input class="logininput" type="text" name="login" value="" placeholder="Nazwa użytkownika" required><br>
+        <input class="logininput" type="password" name="password" value="" placeholder="Hasło" required><br>
+        <input type="submit" name="commit" value="Zaloguj się" class="passwordboxbutton"><br>
+        <?php if (isset($_POST["commit"])) {
+          require_once ('connect.php');
+          $loginlog=$_POST["login"];
+          $passwordlog=$_POST["password"];
+          $checkactive= "SELECT `id_status` FROM `users` WHERE login = '$loginlog'";
+          $checkactivee=mysqli_query($conn,$checkactive);
+          echo "string";
+          if (mysqli_fetch_row($checkactivee)[0]==1) {
+            echo "Użytkownik nieaktywny, poczekaj na aktywację.";
+          }
+          else {
+            if (mysqli_fetch_row($checkactivee)[0]==3) {
+              echo "Użytkownik zablokowany.";
+            }
+            else {
+                echo "d";
+                $checkpassword = "SELECT `password` FROM `users` WHERE login = '$loginlog'";
+                $hashedpassword = mysqli_query($conn,$checkpassword);
+                $hashedpasswordafter = mysqli_fetch_row($hashedpassword)[0];
+                if (password_verify($passwordlog,$hashedpasswordafter)) {
+                  echo "s";
+                  $_SESSION["login"]=$loginlog;
+                  header("Location: paneluzytkownika.php");
+                }
+                else {
+                  echo "Złe hasło!";
+                }
+              }
+            }
+          } ?>
       </form>
-        Zapomniałeś hasła? <a class="passwordboxbutton">Zresetuj hasło</a>
       </div>
       </div>
       <section class="maintext">

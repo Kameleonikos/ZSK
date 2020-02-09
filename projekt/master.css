@@ -156,7 +156,7 @@ footer
   padding: 1em;
   border-radius: 8px;
   display: block;
-  width: 90%;
+  width: 70%;
   margin: auto;
   margin-top: 1em;
 }
@@ -177,11 +177,12 @@ footer
 }
 .admform
 {
-  line-height: 250%;
+  line-height: 110%;
   text-align: center;
   margin: auto;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .word
 {

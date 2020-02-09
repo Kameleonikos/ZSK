@@ -44,7 +44,7 @@
               Powtórz hasło: <input class="cfinput" type="password" name="passwordcheck" value="">
               Imię: <input class="cfinput" type="text" name="imie" value="">
               Nazwisko: <input class="cfinput" type="text" name="nazwisko" value="">
-              Data urodzenia: <input class="cfinput" type="date" name="dataurodzenia" value="">
+              Data urodzenia: <input class="cfinput" type="date" name="dataurodzenia" value=""><br>
               <input class="passwordboxbutton" type="submit" name="" value="Skończone!">
             </form>
           </div>

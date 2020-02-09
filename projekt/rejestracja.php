@@ -10,7 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
-  </head>
   <body>
     <div class="topnav">
       <a href="index.php">Home</a>
@@ -37,15 +36,15 @@
         <div class="content">
           <h1>Zarejestruj się!</h1>
           <div class="admpanel">
-            <form class="admform" action="index.html" method="post">
-              Login: <input class="cfinput" type="text" name="login" value="">
-              E-mail: <input class="cfinput" type="email" name="email" value="">
-              Hasło: <input class="cfinput" type="password" name="password" value="">
-              Powtórz hasło: <input class="cfinput" type="password" name="passwordcheck" value="">
-              Imię: <input class="cfinput" type="text" name="imie" value="">
-              Nazwisko: <input class="cfinput" type="text" name="nazwisko" value="">
-              Data urodzenia: <input class="cfinput" type="date" name="dataurodzenia" value=""><br>
-              <input class="passwordboxbutton" type="submit" name="" value="Skończone!">
+            <form class="admform" method="post">
+              Login: <input class="cfinput" type="text" name="login" value="" required>
+              E-mail: <input class="cfinput" type="email" name="email" value="" required>
+              Hasło: <input class="cfinput" type="password" name="password" value="" required>
+              Powtórz hasło: <input class="cfinput" type="password" name="passwordcheck" value="" required>
+              Imię: <input class="cfinput" type="text" name="imie" value="" required>
+              Nazwisko: <input class="cfinput" type="text" name="nazwisko" value="" required>
+              Data urodzenia: <input class="cfinput" type="date" name="dataurodzenia" value="" required><br>
+              <input class="passwordboxbutton" type="submit" name="rejestracjadone" value="Skończone!">
             </form>
           </div>
         </div>
@@ -53,6 +52,29 @@
       <footer>
         Jakub Putto 2019
       </footer>
+      <?php
+  function checkrejestracja()
+  {
+        require_once ('connect.php');
+        $login=$_POST["login"];
+        $email=$_POST["email"];
+        if (filter_var($email, FILTER_VALIDATE_EMAIL))
+        {
+          $logincorr = "SELECT * FROM `users` WHERE login = '$login'";
+          $logincorrnum = $logincorr->num_rows;
+          $emailcorr = "SELECT * FROM `users` WHERE email = '$email'";
+          $emailcorrnum = $emailcorr->num_rows;
+          if ($logincorrnum==0 && $emailcorrnum==0) {
+
+          }
+          else {
+            $bladdupl="Istnieje użytkowik z takim mailem"
+            echo "<script type='text/javascript'>alert('$bladdupl');</script>";
+          }
+        }
+
+  }
+      ?>
       <script type="text/javascript">
   document.getElementById("loginbutton").addEventListener("click", function(){
        document.querySelector(".loginpopup").style.display = "flex";});

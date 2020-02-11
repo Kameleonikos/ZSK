@@ -88,9 +88,11 @@ session_start();
                 $login=$_POST["login"];
                 $email=$_POST["email"];
                 $password=password_hash($_POST["password"],PASSWORD_ARGON2ID);
+                $passwordcheck=password_hash($_POST["passwordcheck"],PASSWORD_ARGON2ID);
                 $imie=$_POST["imie"];
                 $nazwisko=$_POST["nazwisko"];
                 $dataurodzenia=$_POST["dataurodzenia"];
+                if ($password===$passwordcheck) {
                 if (filter_var($email, FILTER_VALIDATE_EMAIL))
                 {
                   $logincorr = "SELECT COUNT(*) FROM `users` WHERE login = '$login'";
@@ -111,6 +113,12 @@ session_start();
                   }
                 }
             }
+            else {
+              ?><script type="text/javascript">
+                alert('Hasła nie pasują do siebie');
+              </script><?php
+            }
+          }
               ?>
             </form>
           </div>

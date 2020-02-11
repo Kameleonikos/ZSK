@@ -1,6 +1,7 @@
 <?php
 session_start();
- ?>
+if (!empty($_SESSION["login"])) {
+  ?>
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
   <head>
@@ -103,4 +104,9 @@ session_start();
        document.querySelector(".loginpopup").style.display="none";});
       </script>
   </body>
+<?php } else {
+  ?><script type="text/javascript">
+    alert('Zaloguj się!');
+  </script><?php
+} ?>
 </html>

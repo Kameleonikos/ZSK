@@ -48,28 +48,21 @@ ROW;
      </form>
 
 <?php
-  if (isset($_GET['update_id'])) {
-    $id = $_GET['update_id'];
-    $sql = "SELECT * FROM `user` WHERE `id`='$id'";
-    $result = mysqli_query($conn, $sql);
-    $user = mysqli_fetch_assoc($result);
-    $name = $user['name'];
-    $surname = $user['surname'];
-    $birthday = $user['birthday'];
-    //echo $user['name'];
-
-    echo <<<FORMUPDATE
-      <hr><h3>Aktualizuj użytkownika</h3>
-      <form action="./scripts/add_user.php" method="post">
-        <input type="text" name="name" value="$name"><br><br>
-        <input type="text" name="surname" value="$surname"><br><br>
-        <input type="date" name="birthday" value="$birthday"><br><br>
-        <input type="submit" name="button" value="Aktualizuj użytkownika">
-        <input type="hidden" name="id" value="$id">
-      </form>
-FORMUPDATE;
-
-  }
+if (isset($_GET['update_id'])) {
+  $id = $_GET['update_id'];
+  $sql = "SELECT * FROM `user` WHERE id='$id'";
+  $result = mysqli_query($conn,$sql);
+  $user = mysqli_fetch_assoc($result);
+  echo <<<FORMUPDATE
+  <hr><h3>Aktualizacja użytkownika</h3>
+  <form action="./scripts/add_user.php" method="post">
+    <input type="text" name="name" value="$user[name]" placeholder="Imię"><br><br>
+    <input type="text" name="surname" value="$user[surname]" placeholder="Nazwisko"><br><br>
+    <input type="date" name="birthday" value="$user[birthday]" ><br><br>
+    <input type="submit" name="button" value="Aktualizuj użytkownika">
+  </form>
+  FORMUPDATE;
+}
  ?>
 
   </body>
